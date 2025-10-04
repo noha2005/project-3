@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fast Food - مطعم الوجبات السريعة</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Social Icons (fixed) -->
+<div class="social-icons">
+  <div class="icon-box"><i class="fa-brands fa-facebook-f"></i></div>    <!--icon-box-->
+  <div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div>      <!--icon-box-->
+  <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>     <!--icon-box-->
+</div>    <!--social-icons-->
+
+<!-- Header / Navbar -->
+<header>
+  <nav class="navbar navbar-expand-lg bg-danger navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <h1 style="margin:0; font-size:20px;">مطعم الوجبات السريعة</h1>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" style="color: #fff0a0;">
+              تسجيل الدخول
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#menu" style="border: 2px solid #fff; color: #fff; margin: 5px; border-radius: 10px;">قائمة الطعام</a>
+          </li>
+
+          <li class="nav-item d-flex align-items-center">
+            <input type="text" class="form-control" placeholder="ابحث عن وجبة" lang="ar" dir="rtl"
+              style="border-radius: 8px; margin: 5px; width:170px;">
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: #fff;" lang="ar" dir="rtl">
+              العروض
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">عرض البرجر</a></li>
+              <li><a class="dropdown-item" href="#">عرض العائلة</a></li>
+              <li><a class="dropdown-item" href="#">وجبة اليوم</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" style="color: #fff;">تواصل معنا</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: #fff;">الرئيسية</a>
+          </li>
+        </ul>
+      </div>   <!--collapse navbar-collapse-->
+    </div>     <!--container-->
+  </nav>
+</header>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-end">
+      <div class="modal-header">
+        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="loginModalLabel" lang="ar" dir="rtl">تسجيل الدخول</h5>
+      </div>  <!--modal-header-->
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="email" class="form-label">البريد الإلكتروني أو رقم الهاتف</label>
+            <input type="text" class="form-control" id="email" placeholder="example@example.com" lang="ar" dir="rtl">
+          </div>   <!--mb-3-->
+          <div class="mb-3">
+            <label for="password" class="form-label">كلمة المرور</label>
+            <input type="password" class="form-control" id="password" placeholder="" lang="ar" dir="rtl">
+          </div>  <!--mb-3-->
+          <div class="mb-3 text-start">
+            <a href="#" class="text-decoration-none" style="margin-left: 67%;">هل نسيت كلمة المرور؟</a>
+          </div>  <!--mb-3 text-start-->
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="remember"> تذكرنى
+            </label>
+          </div>    <!--form-check mb-3-->
+          <button type="submit" class="btn btn-primary w-100">تسجيل دخول</button>
+        </form>
+      </div>  <!--modal-body-->
+    </div>  <!--modal-content text-end-->
+  </div>   <!--modal-dialog modal-dialog-centered-->
+</div>    <!--modal fade-->
+
+<!-- HERO / MAIN -->
+<main>
+  <div class="main-overlay" style="position:relative; height:85vh; background: url(https://plus.unsplash.com/premium_photo-1748027751473-0c4893392110?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90oy1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover no-repeat;">
+    <div class="overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.45);"></div>   <!--overlay-->
+    <div class="content" style="position:relative; z-index:1; text-align:center; color:#fff; top:45%;">
+      <h1 class="title" style="font-size:48px; margin-bottom:10px;">مطعم الوجبات السريعة</h1>
+      <p style="font-size:20px; margin-bottom:18px;">استمتع بأشهى البرجر، البيتزا والوجبات السريعة</p>
+      <button type="button" class="btn btn-outline-warning">اطلب الآن</button>
+    </div>  <!--content-->
+  </div>   <!--main-overlay-->
+</main>
+
+
+  <!-- MENU CAROUSEL -->
+  <div class="container" id="menu">
+    <section class="menu-section">
+      <h2 class="text-center mb-4">قسم الوجبات</h2>
+
+      <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item meal1 active" style="height:600px; background: url(./Images/بيتزا\ مارجريتا) center/cover no-repeat;">
+            <div class="overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.35);"></div>  <!--overlay-->
+            <div class="meal-content" style="position:absolute; bottom:18%; left:50%; transform:translateX(-50%); color:#fff; text-align:center;">
+              <h3 class="meal-title" style="font-size:40px; margin-bottom:10px;">بيتزا مارجريتا</h3>
+              <p>بيتزا طازجة مع جبنة موزاريلا وصلصة طماطم</p>
+              <button class="btn btn-outline-warning mt-2">اطلب الآن</button>
+            </div>  <!--meal-content-->
+          </div>  <!--carousel-item meal1 active-->
+
+          <div class="carousel-item meal2" style="height:600px; background: url(./Images/برجر\ لحم) center/cover no-repeat;">
+            <div class="overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.35);"></div>   <!--overlay-->
+            <div class="meal-content" style="position:absolute; bottom:18%; left:50%; transform:translateX(-50%); color:#fff; text-align:center;">
+              <h3 class="meal-title" style="font-size:40px; margin-bottom:10px;">برجر لحم سبيشال</h3>
+              <p>برجر لحم طازج مع شرائح جبنة وخضار مخلل</p>
+              <button class="btn btn-outline-warning mt-2">اطلب الآن</button>
+            </div>  <!--meal-content-->
+          </div>   <!--carousel-item meal2-->
+
+          <div class="carousel-item meal3" style="height:600px; background: url(./Images/بطاطس\ محمرة) center/cover no-repeat;">
+            <div class="overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.35);"></div>  <!--overlay-->
+            <div class="meal-content" style="position:absolute; bottom:18%; left:50%; transform:translateX(-50%); color:#fff; text-align:center;">
+              <h3 class="meal-title" style="font-size:40px; margin-bottom:10px;">بطاطس مقلية مقرمشة</h3>
+              <p>بطاطس مقرمشة مع صوص خاص</p>
+              <button class="btn btn-outline-warning mt-2">اطلب الآن</button>
+            </div> <!--meal-content-->
+          </div>  <!--carousel-item meal3-->
+
+        </div>  <!--carousel-inner-->
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>   <!--carousel slide-->
+    </section>
+  </div>   <!--container-->
+<!-- POPULAR MEALS (cards) -->
+<section class="meals-section py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="meal-box1 text-center text-white">
+          <div class="content3">
+            <h2 class="title3">وجبة البرجر</h2>
+            <p>برجر فاخر مع بطاطس</p>
+            <button type="button" class="btn btn-outline-warning custom-btn">اطلب</button>
+
+          </div>   <!--content3-->
+        </div>  <!--meal-box1 text-center text-white-->
+      </div>  <!--col-12 col-md-6 col-lg-4 mb-4-->
+
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="meal-box2 text-center text-white">
+          <div class="content3">
+            <h2 class="title3">بيتزا عائلية</h2>
+            <p>مع إضافات اختيارية</p>
+            <button type="button" class="btn btn-outline-warning custom-btn">اطلب</button>
+            </div>   <!--content3-->
+        </div>  <!--meal-box2 text-center text-white-->
+      </div>  <!--col-12 col-md-6 col-lg-4 mb-4-->
+
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="meal-box3 text-center text-white">
+          <div class="content3">
+            <h2 class="title3">سلطة بطاطس</h2>
+            <p>خيار خفيف مع صوص خاص</p>
+            <button type="button" class="btn btn-outline-warning custom-btn">اطلب</button>
+          </div>  <!--content3-->
+        </div>   <!--meal-box3 text-center text-white-->
+      </div>   <!--col-12 col-md-6 col-lg-4 mb-4-->
+
+    </div>  <!--row justify-content-center-->
+  </div>   <!--container-->
+</section>
+<!-- OFFERS (accordion) -->
+<section class="sec-4">
+  <div id="accordion" class="container py-4">
+
+    <div class="card mb-2">
+      <div class="card-header" lang="ar" dir="rtl" style="background:#333;">
+        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseOne" style="text-decoration:none;">
+          عرض اليوم - ساندويتش + بطاطس + مشروب
+        </a>
+      </div>   <!--card-header-->
+      <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+        <div class="card-body">
+          احصل على ساندويتش خاص مع بطاطس ومشروب بسعر مميز طوال اليوم.
+        </div>  <!--card-body-->
+      </div> <!--collapse show-->
+    </div>  <!--card mb-2-->
+    <div class="card mb-2">
+      <div class="card-header" lang="ar" dir="rtl" style="background:#333;">
+        <a class="collapsed btn text-white" data-bs-toggle="collapse" href="#collapseTwo" style="text-decoration:none;">
+          عرض العائلة - 2 بيتزا + بطاطس
+        </a>
+      </div>   <!--card-header-->
+      <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+          عرض ممتاز للعائلات: اثنتان بيتزا كبيرة مع بطاطس بسعر مناسب.
+        </div>  <!--card-body-->
+      </div>  <!--collapse-->
+    </div>   <!--card mb-2-->
+
+    <div class="card mb-2">
+      <div class="card-header" lang="ar" dir="rtl" style="background:#333;">
+        <a class="collapsed btn text-white" data-bs-toggle="collapse" href="#collapseThree" style="text-decoration:none;">
+          خصم الطلاب - 20%
+        </a>
+      </div>   <!--card-header-->
+      <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+          خصم خاص للطلاب عند تقديم بطاقة الطالب ساريه.
+        </div>  <!--card-body-->
+      </div>   <!--collapse-->
+    </div>   <!--card mb-2-->
+
+  </div>   <!--container py-4-->
+</section>
+<!-- SERVICES SECTION -->
+<section class="container-sec6">
+  <h2>خدماتنا</h2>
+
+  <div class="card">
+    <div class="card-img-overlay">
+      <i class="fa-solid fa-truck fa-3x mb-3"></i>
+      <h5>توصيل سريع</h5>
+      <p>خدمة توصيل تصل إلى باب منزلك بجودة وسرعة عالية.</p>
+    </div>  <!--card-img-overlay-->
+  </div>   <!--card-->
+
+  <div class="card">
+    <div class="card-img-overlay">
+      <i class="fa-solid fa-pizza-slice fa-3x mb-3"></i>
+      <h5>بيتزا طازجة</h5>
+      <p>بيتزا بخبز طازج ومكونات طبيعية 100% مع أشهى الإضافات.</p>
+    </div>   <!--card-img-overlay-->
+  </div>  <!--card-->
+
+  <div class="card">
+    <div class="card-img-overlay">
+      <i class="fa-solid fa-burger fa-3x mb-3"></i>
+      <h5>وجبات سريعة</h5>
+      <p>أفضل أنواع البرجر والساندويتشات مع البطاطس المقرمشة.</p>
+    </div>  <!--card-img-overlay-->
+  </div>   <!--card-->
+</section>
+
+<section class="menu-cards py-5">
+  <div class="container">
+    <h2 class="text-center">قائمة الاقتراحات</h2>
+
+    <!-- Meal Card 1 -->
+<div class="meal-card" lang="ar" dir="rtl">
+    <img src="./Images/Burger.jpg" class="meal-img" alt="برجر" style="background-position: center;">
+    <div class="meal-content">
+        <h3>برجر كلاسيك</h3>
+        <span>الاثنين 11 مارس 2025</span>
+        <p>برجر لحم مع جبنة وخس وطماطم وصوص خاص.</p>
+        <div class="meal-buttons">
+            <button type="button" class="meal-btn order">احجز أوردر</button>
+            <button type="button" class="meal-btn time">15 دقيقة</button>
+            <button type="button" class="meal-btn more">المزيد</button>
+        </div>   <!--meal-buttons-->
+    </div>  <!--meal-content-->
+</div>   <!--meal-card-->
+
+<!-- Meal Card 2 -->
+<div class="meal-card" lang="ar" dir="rtl">
+    <img src="./Images/Pizza.jpg" class="meal-img" alt="بيتزا">
+    <div class="meal-content">
+        <h3>بيتزا موتزاريلا</h3>
+        <span>الأحد 19 أبريل 2025</span>
+        <p>بيتزا طازجة مع جبنة موتزاريلا وصلصة منزلية.</p>
+        <div class="meal-buttons">
+            <button type="button" class="meal-btn order">احجز أوردر</button>
+            <button type="button" class="meal-btn time">20 دقيقة</button>
+            <button type="button" class="meal-btn more">المزيد</button>
+        </div>  <!--meal-buttons-->
+    </div>   <!--meal-content-->
+</div>   <!--meal-card-->
+
+<!-- Meal Card 3 -->
+<div class="meal-card" lang="ar" dir="rtl">
+    <img src="./Images/frise.jpg" class="meal-img" alt="بطاطس">
+    <div class="meal-content">
+        <h3>بطاطس بالجبنة</h3>
+        <span>الثلاثاء 29 مايو 2025</span>
+        <p>بطاطس مقلية مغطاة بصوص الجبنة اللذيذ.</p>
+        <div class="meal-buttons">
+            <button type="button" class="meal-btn order">احجز أوردر</button>
+            <button type="button" class="meal-btn time">10 دقيقة</button>
+            <button type="button" class="meal-btn more">المزيد</button>
+        </div>   <!--meal-buttons-->
+    </div>   <!--meal-content-->
+</div>   <!--meal-card-->
+
+  <!-- SOCIAL MEDIA SECTION -->
+  <section class="social-media-section container mt-5 mb-5">
+    <h2 class="text-end mb-4" style="display: flex;">مواقع التواصل الاجتماعى</h2>
+    <div class="row text-end">
+      <div class="col-12 col-md-6 col-lg-3 mb-3">
+        <div class="social-box d-flex align-items-center p-2" lang="ar" dir="rtl" style="border-radius:10px;">
+          <img src="./Images/تويتر.jpg" alt="تويتر" class="social-icon" style="width:60px;height:50px;">
+          <h5 class="mb-0 me-3">تابعنا على تويتر</h5>
+        </div>   <!--social-box d-flex align-items-center p-2-->
+      </div>   <!--col-12 col-md-6 col-lg-3 mb-3-->
+      <div class="col-12 col-md-6 col-lg-3 mb-3">
+        <div class="social-box d-flex align-items-center p-2" lang="ar" dir="rtl" style="border-radius:10px;">
+          <img src="./Images/لينكد ان.jpg" alt="لينكد إن" class="social-icon" style="width:60px;height:50px;">
+          <h5 class="mb-0 me-3">تابعنا على لينكد ان</h5>
+        </div>   <!--social-box d-flex align-items-center p-2-->
+      </div>  <!--col-12 col-md-6 col-lg-3 mb-3-->
+      <div class="col-12 col-md-6 col-lg-3 mb-3">
+        <div class="social-box d-flex align-items-center p-2" lang="ar" dir="rtl" style="border-radius:10px;">
+          <img src="./Images/واتس اب.jpg" alt="واتساب" class="social-icon" style="width:60px;height:50px;">
+          <h5 class="mb-0 me-3">تواصل معنا على الواتس</h5>
+        </div>  <!--social-box d-flex align-items-center p-2-->
+      </div>  <!--col-12 col-md-6 col-lg-3 mb-3-->
+      <div class="col-12 col-md-6 col-lg-3 mb-3">
+        <div class="social-box d-flex align-items-center p-2" lang="ar" dir="rtl" style="border-radius:10px;">
+          <img src="./Images/فيس بوك.jpg" alt="فيسبوك" class="social-icon" style="width:60px;height:50px;">
+          <h5 class="mb-0 me-3">تابعنا على فيسبوك</h5>
+        </div>  <!--social-box d-flex align-items-center p-2-->
+      </div>  <!--col-12 col-md-6 col-lg-3 mb-3-->
+    </div>  <!--row text-end-->
+  </section>
+<!-- FOOTER -->
+<footer class="text-light pt-5 pb-3" style="background: linear-gradient(135deg, #bc283e, #1b1b1b); width:100%; margin:0; padding:0;">
+  <div class="container-fluid px-5">
+    <div class="row text-center text-md-start">
+      
+      <!-- About -->
+      <div class="col-12 col-md-4 mb-4">
+        <h5 class="mb-3" style="color:#ffc107;">مطعم الوجبات السريعة</h5>
+        <p style="line-height:1.8;">
+          نقدم لك ألذ المأكولات السريعة من البرجر والبيتزا إلى البطاطس المقرمشة،
+          بخدمة توصيل سريعة وجودة عالية على مدار اليوم.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-12 col-md-4 mb-4">
+        <h5 class="mb-3" style="color:#ffc107;">روابط سريعة</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">الرئيسية</a></li>
+          <li><a href="#menu" class="footer-link">قائمة الطعام</a></li>
+          <li><a href="#contact" class="footer-link">تواصل معنا</a></li>
+          <li><a href="#" class="footer-link">تسجيل الدخول</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-12 col-md-4 mb-4">
+        <h5 class="mb-3" style="color:#ffc107;">تواصل معنا</h5>
+        <p><i class="fa-solid fa-location-dot me-2 text-warning"></i>القاهرة، مصر</p>
+        <p><i class="fa-solid fa-phone me-2 text-warning"></i>0100 123 4567</p>
+        <p><i class="fa-solid fa-envelope me-2 text-warning"></i>info@fastfood.com</p>
+        <div class="d-flex justify-content-center justify-content-md-start mt-3 gap-3">
+          <a href="#" class="social-icon-footer"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon-footer"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon-footer"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div> <!-- row -->
+  </div> <!-- container-fluid -->
+
+  <!-- Copyright -->
+  <div class="text-center mt-4 pt-3 border-top border-secondary" style="width:100%;">
+    <p class="mb-0">© 2025 جميع الحقوق محفوظة - مطعم الوجبات السريعة</p>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
